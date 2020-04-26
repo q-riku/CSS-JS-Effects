@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+span {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background-image: url(./bubble.png);
+    background-size: cover;
+    pointer-events: none;
+    box-shadow: 0 0 20px white;
+    border-radius: 50%;
+    filter: saturate(150%);
+    animation: goUp 3s linear infinite;
+}
+
+@keyframes goUp {
+    0% {
+        transform: translate(-50%,-50%);
+        opacity: 0.6;
+        filter: hue-rotate(720deg);
+    }
+
+    100% {
+        transform: translate(-50%,-1500%);
+        opacity: 0.6;
+        filter: hue-rotate(90deg);
+    }
+}
