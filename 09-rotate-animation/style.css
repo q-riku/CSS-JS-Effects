@@ -1,0 +1,108 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    overflow: hidden;
+}
+
+.circle {
+    width: 1200px;
+    height: 1200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.circle span {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background-color: #222;
+    overflow: hidden;
+    animation: rotate 4s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80%,100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle span:nth-child(1) {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation-delay: 0s;
+}
+
+.circle span:nth-child(2) {
+    top: 150px;
+    left: 150px;
+    right: 150px;
+    bottom: 150px;
+    animation-delay: 0.2s;
+}
+
+.circle span:nth-child(3) {
+    top: 300px;
+    left: 300px;
+    right: 300px;
+    bottom: 300px;
+    animation-delay: 0.4s;
+}
+
+.circle span:nth-child(4) {
+    top: 450px;
+    left: 450px;
+    right: 450px;
+    bottom: 450px;
+    animation-delay: 0.6s;
+}
+
+.circle span:nth-child(5) {
+    top: 600px;
+    left: 600px;
+    right: 600px;
+    bottom: 600px;
+    animation-delay: 0.8s;
+}
+
+.circle span::before {
+    content: 'DiSCOVER';
+    color: white;
+    font-size: 16em;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.circle span::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 75px rgba(0, 0, 0, 0.5),
+    inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
