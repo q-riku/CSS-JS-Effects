@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 clock</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="clock">
+        <div class="number">
+            <div class="num">
+                <div class="circle">
+                    <p>1</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>2</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>3</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>4</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>5</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>6</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>7</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>8</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>9</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>10</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>11</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+            <div class="num">
+                <div class="circle">
+                    <p>12</p>
+                </div>
+                <div class="stick"></div>
+            </div>
+
+        </div>
+
+        <div class="handle">
+            <div class="hour">
+                <div class="hr" id="hr"></div>
+            </div>
+            <div class="min">
+                <div class="mn" id="mn"></div>
+            </div>
+            <div class="sec">
+                <div class="sc" id="sc"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const deg = 6;
+        const hr = document.querySelector("#hr");
+        const mn = document.querySelector("#mn");
+        const sc = document.querySelector("#sc");
+
+        setInterval(function () {
+            let day = new Date();
+            let hh = day.getHours() * 30;
+            let mm = day.getMinutes() * deg;
+            let ss = day.getSeconds() * deg;
+
+            hr.style.transform = "rotateZ(" + (hh + mm/12) + "deg)";
+            mn.style.transform = "rotateZ(" + mm + "deg)";
+            sc.style.transform = "rotateZ(" + ss + "deg)";
+        });
+    </script>
+
+</body>
+
+</html>

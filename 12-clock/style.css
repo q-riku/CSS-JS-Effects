@@ -1,0 +1,295 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Assistant', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ivory;
+}
+
+.clock {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8);
+}
+
+.clock::before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(255, 251, 240);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    z-index: 150;
+}
+
+.clock::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(255, 251, 240);
+    box-shadow: 0 0px 5px rgba(0,0,0,0.3);
+    z-index: 160;
+}
+
+.number {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.num {
+    width: calc(100% - 180px);
+    height: calc(100% - 180px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.num:nth-child(3n) {
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.num:nth-child(3n) .circle {
+    width: 100px;
+    height: 100px;
+}
+
+.circle p {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: -2px;
+    letter-spacing: -0.1rem;
+    color: #FAFAFA;
+}
+
+.stick {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.stick::before {
+    content: '';
+    width: 8px;
+    height: 50%;
+    position: absolute;
+    background-color: rgb(231, 221, 177);
+    box-shadow: 0 0px 5px rgba(0,0,0,0.3);
+    z-index: 99;
+}
+
+.num:nth-child(1) {
+    transform: rotate(30deg);
+}
+
+.num:nth-child(1) .circle {
+    transform: rotate(-30deg);
+    background-color: #7986CB;
+}
+
+.num:nth-child(2) {
+    transform: rotate(60deg);
+}
+
+.num:nth-child(2) .circle {
+    transform: rotate(-60deg);
+    background-color: #81C784;
+}
+
+.num:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.num:nth-child(3) .circle {
+    transform: rotate(-90deg);
+    background-color: #FFB74D;
+}
+
+.num:nth-child(4) {
+    transform: rotate(120deg);
+}
+
+.num:nth-child(4) .circle {
+    transform: rotate(-120deg);
+    background-color: #4FC3F7;
+}
+
+.num:nth-child(5) {
+    transform: rotate(150deg);
+}
+
+.num:nth-child(5) .circle {
+    transform: rotate(-150deg);
+    background-color: #9575CD;
+}
+
+.num:nth-child(6) {
+    transform: rotate(180deg);
+}
+
+.num:nth-child(6) .circle {
+    transform: rotate(-180deg);
+    background-color: #FFF176;
+}
+
+.num:nth-child(7) {
+    transform: rotate(210deg);
+}
+
+.num:nth-child(7) .circle {
+    transform: rotate(-210deg);
+    background-color: #e57373;
+}
+
+.num:nth-child(8) {
+    transform: rotate(240deg);
+}
+
+.num:nth-child(8) .circle {
+    transform: rotate(-240deg);
+    background-color: #616161;
+}
+
+.num:nth-child(9) {
+    transform: rotate(270deg);
+}
+
+.num:nth-child(9) .circle {
+    transform: rotate(-270deg);
+    background-color: #F06292;
+}
+
+.num:nth-child(10) {
+    transform: rotate(300deg);
+}
+
+.num:nth-child(10) .circle {
+    transform: rotate(-300deg);
+    background-color: #303F9F;
+}
+
+.num:nth-child(11) {
+    transform: rotate(330deg);
+}
+
+.num:nth-child(11) .circle {
+    transform: rotate(-330deg);
+    background-color: #FF4081;
+}
+
+.num:nth-child(12) {
+    transform: rotate(360deg);
+}
+
+.num:nth-child(12) .circle {
+    transform: rotate(-360deg);
+    background-color: #CDDC39;
+}
+
+.handle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hour,.min,.sec {
+    position: absolute;
+    z-index: 159;
+}
+
+.hour,.hr {
+    width: 200px;
+    height: 200px;
+}
+
+.min,.mn {
+    width: 300px;
+    height: 300px;
+}
+
+.sec,.sc {
+    width: 320px;
+    height: 320px;
+}
+
+.hr,.mn,.sc {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hr::before {
+    content: '';
+    width: 8px;
+    height: 120px;
+    position: absolute;
+    border-radius: 6px;
+    background-color: #848484;
+    box-shadow: 0 0px 3px rgba(0,0,0,0.3);
+    z-index: 159;
+}
+
+.mn::before {
+    content: '';
+    width: 4px;
+    height: 180px;
+    position: absolute;
+    border-radius: 6px;
+    background-color: #848484;
+    box-shadow: 0 0px 3px rgba(0,0,0,0.3);
+    z-index: 159;
+}
+
+.sc::before {
+    content: '';
+    width: 2px;
+    height: 190px;
+    position: absolute;
+    border-radius: 6px;
+    background-color: #ff6767;
+    box-shadow: 0 0px 3px rgba(0,0,0,0.3);
+    z-index: 159;
+}
