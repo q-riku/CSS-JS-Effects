@@ -1,0 +1,56 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fjalla One', cursive;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    clip-path: circle(75px at var(--x) var(--y));
+}
+
+.bg:active {
+    clip-path: circle(300px at var(--x) var(--y));
+}
+
+.contents {
+    max-width: 1000px;
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    user-select: none;
+}
+
+.contents h2 {
+    color: white;
+    font-size: 60px;
+    position: relative;
+}
+
+.contents p {
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
