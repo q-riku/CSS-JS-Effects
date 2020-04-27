@@ -18,5 +18,3 @@
 	<li><a href="https://www.q-riku.blog/CSS-JS-effects/02/">02 fullpage scrolling-pagepiling.js</a></li>
 	<li><a href="https://www.q-riku.blog/CSS-JS-effects/01/">01 scroll effects</a></li>
 </ul>
-
-javascript:var elms=document.getElementsByTagName('a');for(var i=0;i<elms.length;i++){elms[i].setAttribute('target','_blank');}
