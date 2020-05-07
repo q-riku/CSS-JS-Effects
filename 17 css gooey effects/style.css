@@ -1,0 +1,80 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'M PLUS 1p',sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #010b10;
+}
+
+section {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    filter: url('#gooey');
+}
+
+.loading {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.loading span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    animation: liquid 4s ease-in-out infinite;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.loading span::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 20px);
+    background-image: linear-gradient(#fce4ec,#03a9f4);
+    box-shadow: 0 0 30px #03a9f4;
+}
+
+@keyframes liquid {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%,100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#fce4ec,#03a9f4);
+}
+
+svg {
+    width: 0;
+    height: 0;
+}
