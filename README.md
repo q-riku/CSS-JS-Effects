@@ -2,7 +2,8 @@
 
 <h2>URL</h2>
 <ul>
-	<li><a href="https://www.q-riku.blog/CSS-JS-effects/16/">16 imagesloaded</a> [~NEW~]</li>
+	<li><a href="https://www.q-riku.blog/CSS-JS-effects/17/">17 css gooey effects</a> [~NEW~]</li>
+	<li><a href="https://www.q-riku.blog/CSS-JS-effects/16/">16 imagesloaded</a></li>
 	<li><a href="https://www.q-riku.blog/CSS-JS-effects/15/">15 scrollmagic-02</a></li>
 	<li><a href="https://www.q-riku.blog/CSS-JS-effects/14/">14 scrollmagic-01</a></li>
 	<li><a href="https://www.q-riku.blog/CSS-JS-effects/13/">13 3d layered image hover effects</a></li>
