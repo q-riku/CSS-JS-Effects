@@ -1,0 +1,93 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', cursive;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 40px;
+    color: white;
+    margin-left: 10px;
+}
+
+nav .btn {
+    width: 30px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav .btn span {
+    height: 2px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color: white;
+}
+
+nav .btn span:nth-child(1) {
+    width: 100%;
+}
+
+nav .btn span:nth-child(2) {
+    width: 60%;
+}
+
+nav .btn span:nth-child(3) {
+    width: 40%;
+}
+
+.photo {
+    width: 100%;
+    height: calc(100vh - 240px);
+    margin: 30px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #C9CCD3;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+    background-blend-mode: lighten;
+    z-index: -1;
+}
